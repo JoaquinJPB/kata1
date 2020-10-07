@@ -1,15 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package kata1;
+
 import java.time.LocalDate;
-/**
- *
- * @author Joaquin
- */
+
 public class Person {
+
     private final String name;
     private final LocalDate birthdate;
 
@@ -17,7 +11,7 @@ public class Person {
         this.name = name;
         this.birthdate = birthdate;
     }
-    
+
     public String getName() {
         return name;
     }
@@ -25,13 +19,13 @@ public class Person {
     public LocalDate getBirthdate() {
         return birthdate;
     }
-    
-    public int getAge(){
+
+    public int getAge() {
         return toYears(LocalDate.now().toEpochDay() - birthdate.toEpochDay());
     }
 
     private int toYears(long days) {
-        return (int) (days/365.25);
+        return (int) (days / 365.25);
     }
-    
+
 }
